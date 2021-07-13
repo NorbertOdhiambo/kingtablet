@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block  content %}
+
+     <div class="wrapper" style="background-color: #00b8e6">
+        {# #0b3a56#}
+        <nav class="navbar navbar-light bg-transparent" style="width: 100%">
+            <div class="container-fluid">
+
+                <img src="/media/images/kingtab.png" alt="" width="200px" height="auto">
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="parallax">
+        {#    <span class="las la-user" style="color: black; align-items: normal; font-size: 5rem"></span>#}
+        <div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+    </div>
+
+    <div class="services">
+    <div class="row">
+  <div class="col">
+    <div class="card">
+      <img src="/media/images/kingtab_comp.png" class="card-img-top" alt="...">
+        <a href="{% url 'services:comp' %}">
+            <button style="width: 100px; position: absolute; bottom: 10px; left: 10px; background-color: lightblue">Learn more</button>
+        </a>
+    </div>
+  </div>
+        </div>
+
+        <div class="row">
+  <div class="col">
+    <div class="card">
+      <img src="/media/images/kingtab_internet.png" class="card-img-top" alt="...">
+        <a href="{% url 'services:internet' %}">
+            <button style="width: 100px; position: absolute; bottom: 20px; left: 20px; background-color: lightblue">Learn more</button>
+        </a>
+    </div>
+  </div>
+        </div>
+
+        <div class="row">
+  <div class="col">
+    <div class="card">
+      <img src="/media/images/kingtab_screen.png" class="card-img-top" alt="...">
+        <a href="{% url 'services:screens' %}">
+            <button style="width: 100px; position: absolute; bottom: 30px; left: 20px; background-color: lightblue">Learn more</button>
+        </a>
+    </div>
+  </div>
+        </div>
+    </div>
+
+    <br>
+<hr style="margin: 2.5rem; height:3px">
+
+
+
+
+
+    <div class="page-wrapper"></div>
+
+<button id="contbnt"></button>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><span class="las la-arrow-up" style="font-size: 1.8rem"></span></button>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section contact">
+                <img src="/media/images/kingtab.png" alt="" width="auto" height="100px">
+                <h4>Contacts</h4>
+                <ul>
+                    <li>Phone no: +254 722 572130</li>
+
+                    <li>Email: kingtablet@gmail.com</li>
+
+                    <li>Social media: <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/+254715412469" class="whatsapp_float" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section links">
+                <h4>Quick links</h4>
+                <ul>
+                    <a href="#">
+                        <li>About</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact us</li>
+                    </a>
+                    <a href="#">
+                        <li>Location</li>
+                    </a>
+                    <a href="#">
+                        <li>Create account</li>
+                    </a>
+
+                </ul>
+            </div>
+
+{#            <div class="footer-section contact-form">#}
+{#                <h4>Contact us</h4>#}
+{#                <br>#}
+{#                <form action="index html" method="post">#}
+{#                    <input type="email" name="email" class="text-input contact-input"#}
+{#                           placeholder="Enter email address...">#}
+{#                    <textarea name="message" class="text-input contact-input"></textarea>#}
+{#                    <button type="submit" class="btn btn-big">#}
+{#                        Send#}
+{#                        <i class="fas fa-envelope"></i>#}
+{#                    </button>#}
+{#                </form>#}
+{#            </div>#}
+        </div>
+        <div class="footer-bottom">
+            &copy;2021 | All rights reserved
+        </div>
+    </div>
+
+<script type="text/javascript">
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+
+    //Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+
+{% endblock %}
